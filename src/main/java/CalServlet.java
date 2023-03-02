@@ -5,11 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//FT님.........................???ㅠㅠ
-
 @WebServlet("/cal")
 public class CalServlet extends HttpServlet {
-  //Ca.Servlet (query parameter 2개)
+  //CalServlet (query parameter 2개)
   //1. num1 = 3
   //2. (+,-)
   //3. num2 = 4 (num1, num2는 모두 Integer)
