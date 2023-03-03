@@ -33,7 +33,7 @@ public class MemberController {
   }
 
   @GetMapping("/members")
-  @ResponseBody // json 응답
+  @ResponseBody
   public List memberList(Model model) {
     List<Member> members = memberService.memberList();
     model.addAttribute("members", members);
