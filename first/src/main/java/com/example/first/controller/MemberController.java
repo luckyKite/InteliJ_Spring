@@ -32,12 +32,19 @@ public class MemberController {
     return "redirect:/member/home";
   }
 
-  @GetMapping("/members")
-  @ResponseBody
-  public List memberList(Model model) {
+//  @GetMapping("/members")
+//  @ResponseBody
+//  public List memberList(Model model) {
+//    List<Member> members = memberService.memberList();
+//    model.addAttribute("members", members);
+//    return members;
+//  }
+
+  @GetMapping("/members") //controller 와 view 사이에 전달 해 주는 것은 model 이고, 호출하는 url 주소
+  public String memberList(Model model) {
     List<Member> members = memberService.memberList();
     model.addAttribute("members", members);
-    return members;
+    return "member/memberlist"; //member 폴더의 memberlist.jsp를 불러와라
   }
 
 }
