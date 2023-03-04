@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MemoryMemberRepository {
+public class MemoryMemberRepository implements MemberRepository {
   private static Map<Long, Member> map = new HashMap<>();
 
   private static long nextId = 1L;

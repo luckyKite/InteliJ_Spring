@@ -12,7 +12,11 @@ import java.util.List;
 
 @Controller
 public class MemberController {
-  private final MemberService memberService = new MemberService();
+  private final MemberService memberService;
+
+  public MemberController(MemberService memberService) {
+    this.memberService = memberService;
+  }
 
   @GetMapping("/member/home")
   public String home() {
