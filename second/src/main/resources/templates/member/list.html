@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each=" member : ${members} ">
+            <td th:text="${member.id}">1</td>
+            <td th:text="${member.name}">유관순</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
