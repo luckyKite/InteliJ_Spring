@@ -25,7 +25,7 @@ public class JDBCTemplateMemberRepository implements MemberRepository {
   }
 
   @Override
-  public Member save(Member member) {
+  public Member save(Member member) { //받아온 name의 이름으로 멤버를 담는다.
     SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
     jdbcInsert.withTableName("member").usingGeneratedKeyColumns("id");
     Map<String, Object> parameters = new HashMap<>();

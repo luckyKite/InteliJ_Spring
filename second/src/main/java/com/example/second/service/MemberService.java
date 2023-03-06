@@ -26,7 +26,7 @@ public class MemberService {
     validateDupMember(member);
 
     //회원 추가
-    memberRepository.save(member);
+    memberRepository.save(member); //controller에서 전달받은 멤버값을 jdbc save()로 보냄.
     return member.getId();
   }
 
