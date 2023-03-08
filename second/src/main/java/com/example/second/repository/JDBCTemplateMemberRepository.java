@@ -14,12 +14,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class JDBCTemplateMemberRepository implements MemberRepository {
 
   private final JdbcTemplate jdbcTemplate;
 
-  @Autowired
+  //@Autowired
   public JDBCTemplateMemberRepository(DataSource dataSource) {
     jdbcTemplate = new JdbcTemplate(dataSource);
   }

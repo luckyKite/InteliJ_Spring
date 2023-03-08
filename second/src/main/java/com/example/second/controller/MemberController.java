@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/member") //이걸 적어줘야 JpaRepository에서 쿼리문 쓸 때 Member 오류가 안난다.
 public class MemberController {
 
   private final MemberService memberService;
