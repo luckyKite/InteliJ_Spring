@@ -3,10 +3,12 @@ package com.example.third.service;
 import com.example.third.domain.Item;
 import com.example.third.domain.ItemDTO;
 import com.example.third.repository.ItemRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class ItemService {
   private final ItemRepository itemRepository;
 

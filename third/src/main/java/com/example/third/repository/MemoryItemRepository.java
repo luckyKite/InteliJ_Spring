@@ -12,7 +12,7 @@ public class MemoryItemRepository implements ItemRepository {
 
   @Override
   public Item save(Item item) {
-    item.setId(seq++);
+    item.setId(++seq);
     map.put(item.getId(), item);
     return item;
   }
