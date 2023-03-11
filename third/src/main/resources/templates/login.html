@@ -8,7 +8,8 @@
 <div>
     <h1>로그인</h1>
 </div>
-<form action="/members/login" method="post" th:object="${member}">
+<!-- action을 비워 놓으면 들어온 url과 동일하게 post로 그대로 가지고 감. -->
+<form method="post" th:action th:object="${member}">
     <div>
         <label for="loginId">로그인 ID</label>
         <input type="text" id="loginId" th:field="*{loginId}" placeholder="아이디를 입력하세요." />
