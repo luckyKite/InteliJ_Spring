@@ -29,7 +29,7 @@ public class JpaMemberRepository implements MemberRepository {
 
   @Override
   public Optional<Member> findByLoginId(String loginId) { //대소문자 구분 확인! => login_id jpa ddl-create 자동으로 생성함
-    Optional<Member> findMember = em.createQuery("SELECT m FROM Member m WHERE m.loginId = :loginId", Member.class)
+    Optional<Member> findMember = em.createQuery("select m from Member m where m.loginId = :loginId", Member.class)
         .setParameter("loginId", loginId)
         .getResultList()
         .stream()
@@ -41,15 +41,15 @@ public class JpaMemberRepository implements MemberRepository {
 
   @Override
   public List<Member> findAll() {
-    List<Member> members = em.createQuery("SELECT m FROM Member m", Member.class).getResultList();
+    List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
     return members;
   }
 
   @Override
   public void update(Long id, Member member) {
-    Member findMember = em.find(Member.class, id);
-    findMember.setName(member.getName());
-    findMember.setPassword(member.getPassword());
-    //map.put(member.getId(), findMember);
+//    Member findMember = em.find(Member.class, id);
+//    findMember.setName(member.getName());
+//    findMember.setPassword(member.getPassword());
+//    //map.put(member.getId(), findMember);
   }
 }

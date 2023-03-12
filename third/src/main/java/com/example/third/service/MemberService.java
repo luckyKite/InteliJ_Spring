@@ -33,7 +33,7 @@ public class MemberService {
     return memberRepository.findByLoginId(loginId);
   }
 
-  public Optional<Member> findMemberId(Long id) {
+  public Optional<Member> findMemberById(Long id) {
     return memberRepository.findById(id);
   }
 }
