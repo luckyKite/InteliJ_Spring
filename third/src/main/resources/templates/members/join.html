@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>join</title>
 </head>
 <body>
-<din>
+<div>
     <h1>회원 가입</h1>
-</din>
+</div>
 <form action="/members/join" method="post" th:object="${member}">
     <div>
         <label for="loginId">로그인 ID</label>
