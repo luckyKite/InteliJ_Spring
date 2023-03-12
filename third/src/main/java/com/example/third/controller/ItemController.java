@@ -41,7 +41,7 @@ public class ItemController {
     return "basic/editForm";
   }
 
-  @PostMapping("/edit/{id}")
+  @PostMapping("/edit/{id}") //수정하는 동작
   public String editItemSave(@PathVariable Long id,
                              @ModelAttribute ItemDTO itemDTO,
                              RedirectAttributes redirectAttributes) {
@@ -66,6 +66,7 @@ public class ItemController {
 //    itemDTO.setItemName(itemName);
 //    itemDTO.setPrice(price);
 //    itemDTO.setQuantity(quantity);
+
     itemService.addItem(itemDTO);
     System.out.println("itemDTO: " + itemDTO);
     return "redirect:/basic/items";

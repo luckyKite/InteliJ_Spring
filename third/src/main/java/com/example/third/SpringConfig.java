@@ -1,9 +1,6 @@
 package com.example.third;
 
-import com.example.third.repository.ItemRepository;
-import com.example.third.repository.JpaMemberRepository;
-import com.example.third.repository.MemberRepository;
-import com.example.third.repository.MemoryItemRepository;
+import com.example.third.repository.*;
 import com.example.third.service.ItemService;
 import com.example.third.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +28,8 @@ public class SpringConfig {
 
   @Bean
   public ItemRepository itemRepository() {
-    return new MemoryItemRepository();
+    //return new MemoryItemRepository();
+    return new JpaItemRepository(em);
   }
 
   @Bean
