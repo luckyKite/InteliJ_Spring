@@ -29,7 +29,7 @@ public class JpaMemberRepository implements MemberRepository {
 
   @Override
   public Optional<Member> findByLoginId(String loginId) { //대소문자 구분 확인! => login_id jpa ddl-create 자동으로 생성함
-    Optional<Member> findMember = em.createQuery("select m from Member m where m.loginId = :loginId", Member.class)
+    Optional<Member> findMember = em.createQuery("select m from Member m where m.loginId=:loginId", Member.class)
         .setParameter("loginId", loginId)
         .getResultList()
         .stream()
