@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Member {
   @Id
   @Column(name = "member_id")
-  //@GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   public Long id;
 
   public String username;
@@ -18,6 +18,10 @@ public class Member {
 
   public Member(Long id, String username) {
     this.id = id;
+    this.username = username;
+  }
+
+  public Member(String username) {
     this.username = username;
   }
 
