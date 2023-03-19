@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 
 public class HelloJPA {
   public static void main(String[] args) {
+    //스프링이 ENF를 만들어줌, 스프링 안써서 직접 만듦.
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
     EntityManager em = emf.createEntityManager();
     EntityTransaction tx = em.getTransaction();
